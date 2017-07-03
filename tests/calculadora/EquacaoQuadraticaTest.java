@@ -3,9 +3,10 @@ package calculadora;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.fail;
 
 /**
- * Created by luan on 01/07/17.
+ * Testes para a Classe EquacaoQuadratica
  */
 class EquacaoQuadraticaTest {
 
@@ -39,8 +40,11 @@ class EquacaoQuadraticaTest {
 
     @Test
     void calcula5() {
-        double raizes[] = EquacaoQuadratica.calcula(3, -1, -2);
-        assertEquals(3, raizes[0]);
-        assertEquals(2, raizes[1]);
+        try{
+            double raizes[] = EquacaoQuadratica.calcula(3, -1, 2);
+            fail("Deve lançar a exceção");
+        } catch (RuntimeException ex){
+            assertEquals("Raiz imaginária", ex.getMessage());
+        }
     }
 }
