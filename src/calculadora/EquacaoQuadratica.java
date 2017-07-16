@@ -1,17 +1,19 @@
 package calculadora;
 
 /**
- * Cálculos para equações quadráticas
+ * Realiza cáuculos para equações quadráticas
  */
 public class EquacaoQuadratica {
 
 
     /**
      * Calcula a raiz real de uma equação quadrática
-     * @param a
-     * @param b
-     * @param c
-     * @return
+     * 
+     * @param a Constante do termo quadrático (ax²)
+     * @param b Constante do termo de expoente unitário (ax)
+     * @param c constante da equação
+     * @return [raiz para raiz quadrada de delta negativo,
+     *          raiz para raiz quadrada de delta positivo]
      */
     public static double[] calcula(double a, double b, double c) {
         double delta = Math.pow(b, 2) - (4 * a * c);
@@ -24,5 +26,4 @@ public class EquacaoQuadratica {
             return raizes;
         }
     }
-
 }
