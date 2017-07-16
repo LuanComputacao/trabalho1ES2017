@@ -1,8 +1,18 @@
-import calculadora.Geometria;
+package tarefa1;
 
 import java.util.Scanner;
 
-public class Main {
+/**
+ * Programa para calculo de área de figuras geométricas. Apresenta opções para 
+ * o usuário escolher a figura a ser utilizada para cálculo
+ * @author LuanComputacao
+ */
+public class CalculadoraGeometrica {
+    
+    /**
+     * Método principal
+     * @param args Argumentos
+     */
     public static void main(String[] args) {
         double result = 0;
 
@@ -28,7 +38,7 @@ public class Main {
                     base = scn.nextDouble();
                     System.out.println("Digite a medida do altura");
                     altura = scn.nextDouble();
-                    result = Geometria.calculaAreaRetangulo(base, altura);
+                    result = calculadora.Geometria.calculaAreaRetangulo(base, altura);
                     break;
                 case 2:
                     figura = "triangulo";
@@ -36,13 +46,13 @@ public class Main {
                     base = scn.nextDouble();
                     System.out.println("Digite a altura");
                     altura = scn.nextDouble();
-                    result = Geometria.calculaAreaTriangulo(base, altura);
+                    result = calculadora.Geometria.calculaAreaTriangulo(base, altura);
                     break;
                 case 3:
                     figura = "circulo";
                     System.out.println("Digite a base");
                     raio = scn.nextDouble();
-                    result = Geometria.calculaAreaCircunferencia(raio);
+                    result = calculadora.Geometria.calculaAreaCircunferencia(raio);
                     break;
             }
 
