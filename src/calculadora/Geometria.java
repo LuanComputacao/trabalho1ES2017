@@ -1,16 +1,16 @@
 package calculadora;
 
 /**
- * Cálculos geométricos
+ * C&aacute;lculos geom&eacute;tricos
  */
 public class Geometria {
 
     /**
-     * Calcula o perimetro de uma área retangular
+     * Calcula o perimetro de uma &aacute;rea ret&acirc;ngulo
      *
-     * @param base
-     * @param altura
-     * @return
+     * @param base Base do ret&acirc;ngulo
+     * @param altura Altura do ret&acirc;ngulo
+     * @return perimetro
      */
     public static double calculaPerimetroRetangulo(double base, double altura) {
         if (base < 0) throw new RuntimeException("A base deve ser positiva.");
@@ -19,11 +19,11 @@ public class Geometria {
     }
 
     /**
-     * Calcuala a área de um retangolo
+     * Calcuala a &aacute;rea de um ret&acirc;ngulo
      *
-     * @param base
-     * @param altura
-     * @return
+     * @param base Base do ret&acirc;ngulo
+     * @param altura Altura do ret&acirc;ngulo
+     * @return &Aacute;rea do ret&acirc;ngulo
      */
     public static double calculaAreaRetangulo(double base, double altura) {
         if (base < 0) throw new RuntimeException("A base deve ser positiva.");
@@ -32,10 +32,10 @@ public class Geometria {
     }
 
     /**
-     * Calcula a área de uma circunferência
+     * Calcula a &aacute;rea de uma circunfer&ecirc;ncia
      *
-     * @param raio raio do circulo
-     * @return
+     * @param raio Raio do circulo
+     * @return &Aacute;rea da circunfer&ecirc;ncia
      */
     public static double calculaAreaCircunferencia(double raio) {
         if (raio < 0) throw new RuntimeException("O raio deve ser positivo");
@@ -43,10 +43,10 @@ public class Geometria {
     }
 
     /**
-     * Calcula a área de um triangulo
+     * Calcula a &aacute;rea de um triangulo
      *
-     * @param base
-     * @param altura
+     * @param base Base do ret&acirc;ngulo
+     * @param altura Altura, entre base e extremo oposto, do tri&acirc;ngulo
      * @return
      */
     public static double calculaAreaTriangulo(double base, double altura) {
