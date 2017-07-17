@@ -6,23 +6,23 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.fail;
 
 /**
- * Created by luan on 02/07/17.
+ * 
  */
 class FisicaTest {
     @Test
-    void velocidadeTest() {
-        assertEquals(10, Fisica.velocidade(10, 60));
+    void velocidadeMedia() {
+        assertEquals(10, Fisica.velocidadeMedia(10, 60));
     }
 
     @Test
-    void velocidadeNegativaTest() {
-        assertEquals(-10, Fisica.velocidade(-10, 60));
+    void velocidadeMedia_calcula_movimento_retrogrado() {
+        assertEquals(-10, Fisica.velocidadeMedia(-10, 60));
     }
 
     @Test
-    void velocidadeTeampoNegativoTest() {
+    void velocidadeTeamp_nao_aceita_tempo_negativo() {
         try {
-            Fisica.velocidade(10, -60);
+            Fisica.velocidadeMedia(10, -60);
             fail("Deve lançar uma exceção");
         } catch (RuntimeException ex) {
             assertEquals("Tempo deve ser maior que 0(zero)", ex.getMessage());
