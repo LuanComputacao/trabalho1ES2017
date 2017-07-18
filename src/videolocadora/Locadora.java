@@ -4,11 +4,12 @@ public class Locadora {
     private int qtdDVDs;
     private float precoLocacao;
 
-    public Locadora() { }
+    public Locadora() {
+    }
 
     public Locadora(int qtdDVDs, float precoLocacao) {
-        this.qtdDVDs = qtdDVDs;
-        this.precoLocacao = precoLocacao;
+        this.setQtdDVDs(qtdDVDs);
+        this.setPrecoLocacao(precoLocacao);
     }
 
     public int getQtdDVDs() {
@@ -16,7 +17,11 @@ public class Locadora {
     }
 
     public void setQtdDVDs(int qtdDVDs) {
-        this.qtdDVDs = qtdDVDs;
+        if (qtdDVDs > 0) {
+            this.qtdDVDs = qtdDVDs;
+        } else {
+            throw new IllegalArgumentException("A quantidade de DVDs não deve ser negativa");
+        }
     }
 
     public float getPrecoLocacao() {
@@ -24,6 +29,10 @@ public class Locadora {
     }
 
     public void setPrecoLocacao(float precoLocacao) {
-        this.precoLocacao = precoLocacao;
+        if (precoLocacao > 0) {
+            this.precoLocacao = precoLocacao;
+        } else {
+            throw new IllegalArgumentException("O valor da locação não deve ser negativa");
+        }
     }
 }
