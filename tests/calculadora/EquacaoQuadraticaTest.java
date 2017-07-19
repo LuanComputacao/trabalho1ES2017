@@ -41,7 +41,7 @@ class EquacaoQuadraticaTest {
     @Test
     void calcula5() {
         try{
-            double raizes[] = EquacaoQuadratica.calcula(3, -1, 2);
+            EquacaoQuadratica.calcula(3, -1, 2);
             fail("Deve lançar a exceção");
         } catch (RuntimeException ex){
             assertEquals("Raiz imaginária", ex.getMessage());

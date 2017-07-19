@@ -7,9 +7,10 @@ package calculadora;
 public class Verificadores {
 
     /**
-     * Verifica se um número é par
-     * @param numero Número à ser verificado
-     * @return 
+     * Verifica se um n&uacute;mero &eacute; par
+     * @param numero N&uacute;mero &agrave; ser verificado
+     * @return True se o n&uacute;mero for p
+     * ar
      */
     public static boolean par(int numero) {
         if(numero == 0) throw new RuntimeException("Número neutro");

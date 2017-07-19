@@ -47,7 +47,7 @@ public class Geometria {
      *
      * @param base Base do ret&acirc;ngulo
      * @param altura Altura, entre base e extremo oposto, do tri&acirc;ngulo
-     * @return
+     * @return Unidades de área
      */
     public static double calculaAreaTriangulo(double base, double altura) {
         if (altura < 0) throw new RuntimeException("A altura deve ser positiva.");
