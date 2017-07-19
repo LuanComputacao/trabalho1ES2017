@@ -1,4 +1,4 @@
-package tarefa2;
+package equacoes;
 
 import calculadora.EquacaoQuadratica;
 import java.util.Arrays;
