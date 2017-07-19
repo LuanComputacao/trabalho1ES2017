@@ -2,8 +2,6 @@ package videolocadora;
 
 /**
  * Classe para calcular as projeções de vendas de serviços
- *
- * @author LuanComputacao
  */
 public class Projecoes {
 
@@ -13,7 +11,7 @@ public class Projecoes {
     /**
      * Construtor
      *
-     * @param locadora
+     * @param locadora Objeto locadora
      */
     public Projecoes(Locadora locadora) {
         this.locadora = locadora;
@@ -31,10 +29,11 @@ public class Projecoes {
     /**
      * Calcula faturamento anual da locadora
      *
+     * @param codigoMoeda C&oacute;digo do formato da moeda  Real do Brasil: BRL
      * @return Faturamento anual por loca&ccedil;&otilde;es
      */
-    public String faturamentoAnual(String moeda) {
-        return this.valorMoeda(this.faturamentoAnual(), moeda);
+    public String faturamentoAnual(String codigoMoeda) {
+        return this.valorMoeda(this.faturamentoAnual(), codigoMoeda);
     }
 
     /**
@@ -49,24 +48,24 @@ public class Projecoes {
     /**
      * Faturamento anual proveniente de multas
      *
+     * @param codigoMoeda C&oacute;digo do formato da moeda  Real do Brasil: BRL
      * @return valor do faturamento
      */
-    public String faturamentoPorMultas(String moeda) {
-        return this.valorMoeda(this.faturamentoPorMultas(), moeda);
+    public String faturamentoPorMultas(String codigoMoeda) {
+        return this.valorMoeda(this.faturamentoPorMultas(), codigoMoeda);
     }
 
     /**
      * Formata em tipo moeda
      *
      * @param valor Valor para ser formatado
-     * @param codigo C&oacute;digo da moeda do pa&iacute;s
+     * @param codigoMoeda C&oacute;digo da moeda do pa&iacute;s
      * @return Valor formatado em tipo de moeda
      */
-    private String valorMoeda(float valor, String codigo) {
-        codigo = "BRL";
-        String valorMoeda = "";
+    private String valorMoeda(float valor, String codigoMoeda) {
+        String valorMoeda;
         String moeda;
-        switch (codigo) {
+        switch (codigoMoeda) {
             case "BRL":
                 moeda = "R$";
                 break;

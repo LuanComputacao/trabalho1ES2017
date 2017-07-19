@@ -21,7 +21,7 @@ class LocadoraTest {
     @Test
     void Construtor_nao_deve_aceitar_qtdDVDs_negativa() {
         try {
-            Locadora locadora = new Locadora(-100, 10);
+            new Locadora(-100, 10);
         } catch (IllegalArgumentException ex) {
             assertEquals("A quantidade de DVDs não deve ser negativa", ex.getMessage());
         }
@@ -30,7 +30,7 @@ class LocadoraTest {
     @Test
     void Construtor_nao_deve_aceitar_preco_de_locacao_negativa() {
         try {
-            Locadora locadora = new Locadora(100, -10);
+            new Locadora(100, -10);
         } catch (IllegalArgumentException ex) {
             assertEquals("O valor da locação não deve ser negativa", ex.getMessage());
         }
