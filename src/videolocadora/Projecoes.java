@@ -74,6 +74,7 @@ public class Projecoes {
                 break;
             default:
                 moeda = "_$";
+                break;
         }
         valorMoeda = String.format("%s%.2f", moeda, valor);
         return valorMoeda;
